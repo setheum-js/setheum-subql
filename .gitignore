@@ -7,6 +7,10 @@
 node_modules/
 dist/
 
+# lock files
+yarn.lock
+package-lock.json
+
 # Compiled Java class files
 *.class
 
@@ -22,6 +26,7 @@ dist/
 # Maven
 target/
 dist/
+src/types
 
 # JetBrains IDE
 .idea/
@@ -48,5 +53,3 @@ Thumbs.db
 *.mov
 *.wmv
 
-# docker volumn
-.data
