@@ -410,7 +410,7 @@
     eventemitter3 "^4.0.7"
     rxjs "^7.3.0"
 
-"@polkadot/api@6.5.1", "@polkadot/api@^6.3.1", "@polkadot/api@^6.5.1":
+"@polkadot/api@6.5.1", "@polkadot/api@^6.3.1":
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/@polkadot/api/-/api-6.5.1.tgz#c6c46ed8274114d56652574bfc64a01610401490"
   integrity sha512-hxnXb4qFlRbqBKnWgvNtRAukDRthAcLjhh1IY9oQ6WRJipdb2wMtNz6MY06gLI0MVGv9u2fOC6Rhd2JGo4CKZg==
