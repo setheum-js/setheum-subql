@@ -17,42 +17,41 @@ async function getPriceFromDexPool (tokenA: string, tokenB: string) {
 
 	return pool.token0Id === tokenA ? amount1.div(amount0) : amount0.div(amount1)
 }
- // get KAR price from KSM-KAR pair
-export async function getKARPrice () {
-	// get KAR-KSM pool
-	const karKSMPrice = await getPriceFromDexPool('KAR', 'KSM')
-	const ksmPrice = await getKSMPrice()
 
-	return karKSMPrice.mul(ksmPrice)
+export async function getSETMPrice () {
+	return getPriceFromDexPool('SETM', 'SETUSD')
 }
 
-export async function getLKSMPrice () {
-	// get KSM-LKSM pool
-	const lksmKSMPrice = await getPriceFromDexPool('LKSM', 'KSM')
-	const ksmPrice = await getKSMPrice()
-
-	return lksmKSMPrice.mul(ksmPrice)
+export async function getSERPPrice () {
+	return getPriceFromDexPool('SERP', 'SETUSD')
 }
 
-export async function getKSMPrice () {
-	return getPriceFromDexPool('KSM', 'KUSD')
+export async function getDNARPrice () {
+	return getPriceFromDexPool('DNAR', 'SETUSD')
 }
 
-// get KUSD price as $1
-export function getKUSDPrice () {
-	return new FixedPointNumber(1, 12)
+// get SETR price as $2
+export function getSETRPrice () {
+	return new FixedPointNumber(2, 18)
+}
+
+// get SETUSD price as $1
+export function getSETUSDPrice () {
+	return new FixedPointNumber(1, 18)
 }
 
 export async function getPrice (name: MaybeCurrency) {
 	const _name = forceToCurrencyIdName(name)
 
-	if (_name === 'KUSD' || _name === 'AUSD') return getKUSDPrice()
+	if (_name === 'SETUSD') return getSETUSDPrice()
 
-	if(_name === 'KSM') return getKSMPrice()
+	if (_name === 'SETR') return getSETRPrice()
 
-	if (_name === 'KAR') return getKARPrice()
+	if(_name === 'SETM') return getSETMPrice()
 
-	if (_name === 'LKSM') return getLKSMPrice()
+	if (_name === 'SERP') return getSERPPrice()
 
-	return getPriceFromDexPool(_name, 'KUSD')
+	if (_name === 'DNAR') return getDNARPrice()
+
+	return getPriceFromDexPool(_name, 'SETUSD')
 }
