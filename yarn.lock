@@ -678,6 +678,16 @@
     "@polkadot/api-derive" "^6.3.1"
     "@setheum.js/types" "1.0.0"
 
+"@setheum.js/api-derive@2.1.0", "@setheum.js/api-derive@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@setheum.js/api-derive/-/api-derive-2.1.0.tgz#f0cbaf89dd29c896880aa59b63bb414244f59ea3"
+  integrity sha512-Qpc3l437mMMXLq+5Xun2zhMHbD+hV3kG0pOKIT5E0qDq/24YMXgx9QWtfGDWQ60G7eQ61f0y2ED+aFfmYNoZIw==
+  dependencies:
+    "@babel/runtime" "^7.10.2"
+    "@open-web3/orml-types" "^1.0.2-0"
+    "@polkadot/api-derive" "^6.3.1"
+    "@setheum.js/types" "2.1.0"
+
 "@setheum.js/api@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@setheum.js/api/-/api-1.0.0.tgz#002a01fb6856a0c45cbdc4efe627bc3d9c0428a5"
@@ -689,6 +699,18 @@
     "@polkadot/rpc-core" "^6.3.1"
     "@setheum.js/api-derive" "1.0.0"
     "@setheum.js/types" "1.0.0"
+
+"@setheum.js/api@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@setheum.js/api/-/api-2.1.0.tgz#2f4ef3dc35c93bad548f4b39bc01aff583751363"
+  integrity sha512-89E5cKmzHdIoaAajQMMd22d0RKROQjGomTI/nPXUW7Q48cIlVKsxPJt4uRP+ro6VHWj44zvI60KaLzAciCoU9g==
+  dependencies:
+    "@babel/runtime" "^7.10.2"
+    "@open-web3/orml-api-derive" "^1.0.2-0"
+    "@polkadot/api" "^6.3.1"
+    "@polkadot/rpc-core" "^6.3.1"
+    "@setheum.js/api-derive" "2.1.0"
+    "@setheum.js/types" "2.1.0"
 
 "@setheum.js/sdk-core@^1.0.0":
   version "1.0.0"
@@ -712,6 +734,14 @@
     "@open-web3/orml-type-definitions" "^1.0.2-0"
     "@polkadot/types" "^6.4.2"
 
+"@setheum.js/type-definitions@2.1.0", "@setheum.js/type-definitions@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@setheum.js/type-definitions/-/type-definitions-2.1.0.tgz#37916ba021086b55a7d8009a351ccdfb1e7f1232"
+  integrity sha512-Q134zwhZEhCKpwLMzJZDoB0DBctWybWcAHJFNwZjHFG/3YUFBS0RWYnKF3ATpWavLFxe+cAgh782GK8wG5dpKw==
+  dependencies:
+    "@open-web3/orml-type-definitions" "^1.0.2-0"
+    "@polkadot/types" "^6.4.2"
+
 "@setheum.js/types@1.0.0", "@setheum.js/types@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@setheum.js/types/-/types-1.0.0.tgz#ab500b22db1061c24732e6ea959aff40cd22332a"
@@ -724,6 +754,19 @@
     "@polkadot/typegen" "^6.3.1"
     "@polkadot/types" "^6.3.1"
     "@setheum.js/type-definitions" "1.0.0"
+
+"@setheum.js/types@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@setheum.js/types/-/types-2.1.0.tgz#8c597091daff05cc8b53e363fd64bb95e40a1e75"
+  integrity sha512-IACdz9i6/rFUBsG6TyiP+ZsSlnAKCJlnWQYMGDEiR4DzF38HUQY4+tygvDd5rqAsIs7IR0QB/QpCVCU3q1MmQA==
+  dependencies:
+    "@babel/runtime" "^7.10.2"
+    "@open-web3/api-mobx" "^1.0.2-0"
+    "@open-web3/orml-types" "^1.0.2-0"
+    "@polkadot/api" "^6.3.1"
+    "@polkadot/typegen" "^6.3.1"
+    "@polkadot/types" "^6.3.1"
+    "@setheum.js/type-definitions" "2.1.0"
 
 "@subql/cli@latest":
   version "0.13.0"
