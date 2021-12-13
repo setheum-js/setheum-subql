@@ -28,7 +28,7 @@ import { EventHandler } from './types';
 // }
 
 // async function getBalance (account: string, token: string) {
-// 	if (token === 'KAR' || token === 'ACA') {
+// 	if (token === 'SETM') {
 // 		const data = await api.query.system.account(account)
 
 // 		return data.data.free.toString()

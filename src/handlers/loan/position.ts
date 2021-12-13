@@ -58,11 +58,9 @@ async function getLoanParamsRecord (token: MaybeCurrency) {
 
 		record.collateralId = collateralName
 		record.maximumTotalDebitValue = '0'
-		record.interestRatePerSec = '0'
 		record.liquidationRatio = '0'
 		record.liquidationPenalty = '0'
 		record.requiredCollateralRatio = '0'
-		record.globalInterestRatePerSec = '0'
 
 		await record.save()
 	}
@@ -84,11 +82,9 @@ async function getLoanParamsHistoryRecord (token: MaybeCurrency, blockNumber: bi
 		record.endAtBlockId = blockId
 		record.collateralId = collateralName
 		record.maximumTotalDebitValue = '0'
-		record.interestRatePerSec = '0'
 		record.liquidationRatio = '0'
 		record.liquidationPenalty = '0'
 		record.requiredCollateralRatio = '0'
-		record.globalInterestRatePerSec = '0'
 
 		await record.save()
 	}
@@ -176,12 +172,10 @@ const createParamsUpdateFN = (name: string): EventHandler => {
 	};
 }
 
-export const handleInterestRatePerSecUpdated = createParamsUpdateFN('interestRatePerSec')
 export const handleLiquidationRatioUpdated = createParamsUpdateFN('liquidationRatio')
 export const handleLiquidationPenaltyUpdated = createParamsUpdateFN('liquidationPenalty')
 export const handleRequiredCollateralRatioUpdated = createParamsUpdateFN('requiredCollateralRatio')
 export const handleMaximumTotalDebitValueUpdated = createParamsUpdateFN('maximumTotalDebitValue')
-export const handleGlobalInterestRatePerSecUpdated = createParamsUpdateFN('globalInterestRatePerSec')
 
 // clear user loan position and global position when close loan by dex
 export const handleCloseLoanHasDebitByDex: EventHandler = async ({ rawEvent}) => {

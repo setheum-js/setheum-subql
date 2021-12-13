@@ -10,7 +10,7 @@ import { getChainName } from "./system";
 let tokenDecimalMap: Map<string, number>;
 
 function getDecimal(token: string) {
-  return tokenDecimalMap.get(token) || 10;
+  return tokenDecimalMap.get(token) || 18;
 }
 
 // get token 
@@ -33,7 +33,7 @@ export async function getToken(currency: MaybeCurrency) {
       );
     }
 
-    let decimal = 10;
+    let decimal = 18;
 
     // TODO: handle erc20
     const isDexShareToken = isDexShare(tokenName);
@@ -79,26 +79,6 @@ export async function getNativeToken() {
   const systemConsts = await SystemConsts.get(chainName);
 
   const token = await Token.get(systemConsts.nativeTokenId);
-
-  return token;
-}
-
-export async function getStakingToken() {
-  const chainName = await getChainName();
-
-  const systemConsts = await SystemConsts.get(chainName);
-
-  const token = await Token.get(systemConsts.stakignTokenId);
-
-  return token;
-}
-
-export async function getLiquidToken() {
-  const chainName = await getChainName();
-
-  const systemConsts = await SystemConsts.get(chainName);
-
-  const token = await Token.get(systemConsts.liquidTokenId);
 
   return token;
 }

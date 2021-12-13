@@ -3,11 +3,11 @@ description: Setheum SubQL
 repository: https://github.com/setheum-js/setheum-subql
 schema: ./schema.graphql
 network:
-  endpoint: wss://polkadot.api.onfinality.io/public-ws
+  endpoint: wss://rpc.setheum.xyz
   dictionary: https://api.subquery.network/sq/subquery/dictionary-polkadot
   typesBundle:
     spec:
-      acala:
+      setheum:
         rpc:
           &a62
           oracle:
@@ -170,7 +170,6 @@ network:
                   - DNAR
                   - SETR
                   - SETUSD
-                  - RENBTC
               DexShare:
                 &a12
                 _enum:
@@ -234,7 +233,6 @@ network:
               RiskManagementParams:
                 &a24
                 maximumTotalDebitValue: Balance
-                interestRatePerSec: Option<Rate>
                 liquidationRatio: Option<Rate>
                 liquidationPenalty: Option<Rate>
                 requiredCollateralRatio: Option<Rate>
@@ -418,7 +416,6 @@ network:
                   - DNAR
                   - SETR
                   - SETUSD
-                  - RENBTC
               DexShare: *a12
               CurrencyId: *a13
               CurrencyIdOf: CurrencyId
@@ -524,7 +521,6 @@ network:
                   DNAR: 2
                   SETR: 3
                   SETUSD: 4
-                  RENBTC: 121
               DexShare: *a12
               CurrencyId:
                 &a57
@@ -579,7 +575,6 @@ network:
               AtLeast64BitUnsigned: u128
               SubAccountStatus: *a50
               Params: *a51
-              StakingPoolPhase: *a52
               Ledger: *a53
               ChangeRate: *a54
               ChangeRatio: *a55
@@ -634,8 +629,7 @@ network:
                   SERP: 1
                   DNAR: 2
                   SETR: 3
-                  SERP: 4
-                  RENBTC: 121
+                  SETUSD: 4
               DexShare: *a12
               CurrencyId: *a57
               CurrencyIdOf: CurrencyId
@@ -739,7 +733,6 @@ network:
                   DNAR: 2
                   SETR: 3
                   SETUSD: 4
-                  RENBTC: 121
               DexShare: *a12
               CurrencyId: *a13
               CurrencyIdOf: CurrencyId
@@ -844,7 +837,6 @@ network:
                   DNAR: 2
                   SETR: 3
                   SETUSD: 4
-                  RENBTC: 121
               DexShare: *a12
               CurrencyId: *a13
               CurrencyIdOf: CurrencyId
@@ -948,7 +940,6 @@ network:
                   DNAR: 2
                   SETR: 3
                   SETUSD: 4
-                  RENBTC: 121
               DexShare: *a12
               CurrencyId: *a13
               CurrencyIdOf: CurrencyId
@@ -1396,7 +1387,7 @@ network:
               AsOriginId: AuthoritysOriginId
               ProxyType: *a49
               AtLeast64BitUnsigned: u128
-              RelayChainBlockNumberOf: RelayChainBlockNumber
+              BlockNumberOf: BlockNumber
               SubAccountStatus: *a50
               Params: *a51
               ChangeRate: *a54

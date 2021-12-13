@@ -21,8 +21,6 @@ import {
   updateUserProvision,
 } from "./dex/provision";
 import {
-  handleGlobalInterestRatePerSecUpdated,
-  handleInterestRatePerSecUpdated,
   handleLiquidationPenaltyUpdated,
   handleLiquidationRatioUpdated,
   handleMaximumTotalDebitValueUpdated,
@@ -31,7 +29,6 @@ import {
   updateLoanPositionByLiquidate,
   handleCloseLoanHasDebitByDex,
 } from "./loan/position";
-// import { updateCrossedKSM } from './summary'
 
 const dispatch = new Dispatcher<DispatchedEventData>();
 
@@ -41,8 +38,6 @@ dispatch.batchRegist([
   // { key: 'currencies-Deposited', handler: updateBalanceByDeposit },
   // { key: 'currencies-Withdrawn', handler: updateBalanceByWithdrawn },
   // { key: 'currencies-Transferred', handler: updateBalanceByTransferred },
-  // { key: 'currencies-Withdrawn', handler: updateCrossedKSM },
-  // { key: 'currencies-Transferred', handler: updateCrossedKSM },
   // nft
   { key: "nft-TransferredToken", handler: createNFTTransferHistory },
   { key: "nft-BurnedToken", handler: createNFTBurnedHistory },
@@ -55,12 +50,10 @@ dispatch.batchRegist([
   { key: "loans-transferLoan", handler: createTransferLoanHistory },
 
   // // all cdp params config update
-  { key: "cdpEngine-InterestRatePerSecUpdated", handler: handleInterestRatePerSecUpdated, },
   { key: "cdpEngine-LiquidationRatioUpdated", handler: handleLiquidationRatioUpdated, },
   { key: "cdpEngine-LiquidationPenaltyUpdated", handler: handleLiquidationPenaltyUpdated, },
   { key: "cdpEngine-RequiredCollateralRatioUpdated", handler: handleRequiredCollateralRatioUpdated, },
   { key: "cdpEngine-MaximumTotalDebitValueUpdated", handler: handleMaximumTotalDebitValueUpdated, },
-  { key: "cdpEngine-GlobalInterestRatePerSecUpdated", handler: handleGlobalInterestRatePerSecUpdated, },
   { key: "cdpEngine-LiquidateUnsafeCDP", handler: createLiquidateUnsafeCDPHistory },
   { key: "cdpEngine-LiquidateUnsafeCDP", handler: updateLoanPositionByLiquidate },
   { key: "setMint-CloseLoanHasDebitByDex", handler: handleCloseLoanHasDebitByDex},
